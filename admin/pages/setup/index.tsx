@@ -30,7 +30,7 @@ const TabPanel = (props: TabPanelProps) => {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -73,7 +73,7 @@ export default function SetupPage () {
           </FormControl>
         </TabPanel>
         <TabPanel value={currentTab} index={1}>
-          <p>Setup your DB</p>
+          <Typography>Setup your DB</Typography>
         </TabPanel>
 
       </Box>
