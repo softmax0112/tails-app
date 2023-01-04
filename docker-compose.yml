@@ -8,6 +8,7 @@ services:
       - "3000:3000"
     volumes:
       - ${PWD}/server:/app:z
+    user: "${UID}:${GID}"
     stdin_open: true
     tty: true
   admin:
@@ -16,6 +17,7 @@ services:
       dockerfile: ./docker/admin/Dockerfile
     volumes:
       - ${PWD}/admin:/app:z
+    user: "${UID}:${GID}"
     ports: 
       - "3001:3001"
     stdin_open: true

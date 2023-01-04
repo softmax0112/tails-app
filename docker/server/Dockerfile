@@ -1,5 +1,6 @@
 FROM ruby:3.1.2
 
+USER 1000
 ENV RAILS_ROOT /app
 ENV DOCKER_DIR $PWD/docker/server
 
