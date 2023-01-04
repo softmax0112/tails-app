@@ -1,0 +1,24 @@
+version: "3"
+services:
+  server:
+    build: 
+      context: .
+      dockerfile: ./docker/server/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ${PWD}/server:/app:z
+    stdin_open: true
+    tty: true
+  admin:
+    build:
+      context: .
+      dockerfile: ./docker/admin/Dockerfile
+    volumes:
+      - ${PWD}/admin:/app:z
+    ports: 
+      - "3001:3001"
+    stdin_open: true
+    tty: true
+volumes: 
+  tails_dev_pg:
