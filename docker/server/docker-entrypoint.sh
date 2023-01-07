@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
-bundle install --path="vendor/bundle"
+bundle config set --local path 'vendor/bundle'
+bundle install
 
 exec "/bin/bash"

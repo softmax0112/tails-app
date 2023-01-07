@@ -1,6 +1,5 @@
 FROM node:18.12
 
-USER 1000
 ENV APP_ROOT /app
 ENV DOCKER_DIR $PWD/docker/admin
 
